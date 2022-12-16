@@ -7,6 +7,8 @@
   <title>NIKE</title>
   <!-- 외부스타일시트 -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/29f84cf8f7.js"></script> 
+
   <!-- 학습내용
   1. 배경에 동영상깔기 (이해되면 v로 체크하기)
   2. 옆으로 누워있는 형태 트랜스폼으로 만들기 
@@ -17,7 +19,8 @@
 </head>
 <body>
   <!-- 트랜스폼 학습 -->
-  <div id="scale">
+
+  <!-- <div id="scale">
     <div class="box01">
       <p>scale(1.2)-<br>x축 y축 비율</p>
     </div>
@@ -33,7 +36,7 @@
       <p>rotate(30deg)-<br>정수는 시계방향</p>
     </div>
     <div class="box02">
-      <p>rotate(-45deg)-<br>음수는 시계방향</p>
+      <p>rotate(-45deg)-<br>음수는 반시계방향</p>
     </div>
     <div class="box03">
       <p>rotate(30deg)</p>
@@ -61,8 +64,28 @@
       <p>translateY(100px)-<br>y축 이동</p>
     </div>
   </div>
+  <div id="rotate_3d">
+    <div class="box01">
+      <p>Y축</p>
+    </div>
+    <div class="box02">
+      <p>X축</p>
+    </div>
+    <div class="box03">
+      <p>Y축</p>
+    </div>
+    <div id="translate_z">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <div class="box3">box3</div>
   <style>
-    #scale, #rotate, #skew, #translate {display: flex; justify-content: space-around; margin-top: 50px; margin-bottom: 50px;}
+    #translate_z {width: 800px; height: 600px; margin: 0 auto; border: 1px solid #000; position: relative;  perspective: 1600px;}
+    #translate_z div {width: 100%; height: 100%; position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.3); font-size: 30px; color: #fff;}
+    .box1 {transform: translateZ(-500px);}
+    .box2 {transform: translateZ(0);}
+    .box3 {transform: translateZ(500px);}
+
+    #scale, #rotate, #skew, #translate, #rotate_3d {display: flex; justify-content: space-around; margin-top: 50px; margin-bottom: 50px;}
     .box01, .box02, .box03 {width: 200px; height: 200px; border: 1px solid #000;}
     p {background-color: rgba(0, 0, 0, 0.6); margin: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff;}
 
@@ -74,13 +97,93 @@
     #rotate .box02 p {transform: rotate(-45deg);}
     #rotate .box03 p {transform: rotate(30deg); transform-origin: right top;}
 
-    #translate .box01 p {transform: translate(100px,100px);}
-    #translate .box02 p {transform: translateX(100px);}
-    #translate .box03 p {transform: translateY(100px);}
-
     #skew .box01 p {transform: skew(30deg,30deg);}
     #skew .box02 p {transform: skewX(30deg);}
     #skew .box03 p {transform: skewY(30deg);}
-  </style>
+
+    #rotate_3d .box01 {perspective: 700px;}
+    #rotate_3d .box01 p {transform: rotateY(50deg); transition: all 0.8s;}
+    #rotate_3d .box01:hover p {transform: rotateY(-310deg);}
+
+    #rotate_3d .box02 {perspective: 700px;}
+    #rotate_3d .box02 p {transform: rotateX(50deg); transition: all 0.8s;}
+    #rotate_3d .box02:hover p {transform: rotateX(-310deg);}
+
+    #rotate_3d .box03 {perspective: 150px;}
+    #rotate_3d .box03 p {transform: rotateY(0deg); transform-origin: left top; transition: all 1.2s;}
+    #rotate_3d .box03:hover p {transform: rotateY(150deg); opacity: 0;}
+  </style> -->
+
+  <div class="vid">
+    <video autoplay loop muted>
+      <source src="img/nike.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h1 class="logo">
+    <img src="img/logo2.png" alt="nike로고">
+  </h1>
+  <header>
+    <nav>
+      <ul id="gnb">
+        <li><a href="#"><em>About NIKE</em></a>
+          <ul>
+            <li><a href=""><em>English</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><em>Brand Info</em></a>
+          <ul>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><em>Community</em></a>
+          <ul>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><em>Product Value</em></a>
+          <ul>
+            <li><a href=""><em>sub</em></a></li>
+            <li><a href=""><em>sub</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><em>Company History</em></a>
+          <ul>
+            <li><a href=""><em>sub</em></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="txtBox">
+    <p class="txt">Best Qualified<b>AIR MAX</b></p>
+    <p class="big">50<em>/24</em></p>
+  </section>
+  <section class="side">
+    <div>
+      <p>
+        <em>Event & Community</em>
+        <img src="img/pic1.png" alt="">
+      </p>
+      <p>
+        <em>News & Notice</em>
+        <img src="img/pic2.png" alt="">
+      </p>
+      <p>
+        <em>Produck Review</em>
+        <img src="img/pic3.png" alt="">
+      </p>
+    </div>
+    <article>
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </article>
+  </section>
+  <!-- <script src="js/js.js"></script> -->
 </body>
 </html>
