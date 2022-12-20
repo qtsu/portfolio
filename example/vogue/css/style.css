@@ -1,0 +1,71 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #bbb;}
+img {border: none; vertical-align: bottom;}
+
+/* 기본설정 */
+body {font-family: 'Orbitron', sans-serif; position: fixed; width: 100%; height: 100%; background-color: #111;}
+
+/* wrap설정 */
+#wrap {position: fixed; width: 100%; height: 100%;}
+
+/* 메뉴버튼 */
+.btnMenu {color: #fff; font-size: 40px; position: fixed; left: 40px; top: 40px; z-index: 3;}
+.btnMenu i {}
+
+/* 네비설정 */
+nav {background-color: #eee; position: fixed; height: 100%; width: 150px; z-index: 2;}
+nav h1 {width: 100px; position: absolute; left: 50%; margin-left: -50px; top: 80px;}
+nav h1 img {width: 100%; height: auto;}
+#gnb {position: absolute; top: 200px; width: 100%;}
+#gnb li {}
+#gnb a {display: block; font-size: 18px; line-height: 4; text-align: center; color: #000;}
+
+/* 섹션설정 */
+section {position: fixed; width: 100%; height: 100%; z-index: 1;}
+section>div {position: absolute; width: 100%; height: 100%; opacity: 0;}
+.box1 {background-color: bisque;}
+.box2 {background-color: aquamarine;}
+.box3 {background-color: orange; opacity: 1;}
+section>div.on {opacity: 1; z-index: 3;}
+
+/* 박스1설정 */
+.box1>p {float: left;}
+.box1>p:nth-child(1) {background-color: #ddd; width: 50%; height: 25%;}
+.box1>p:nth-child(2) {background-color: #ccc; width: 25%; height: 25%;}
+.box1>p:nth-child(3) {background-color: #bbb; width: 25%; height: 25%;}
+.box1>p:nth-child(4) {background-color: #aaa; width: 25%; height: 25%;}
+.box1>p:nth-child(5) {background-color: #111; width: 25%; height: 25%;}
+.box1>p:nth-child(6) {background-color: #222; width: 25%; height: 50%;}
+.box1>p:nth-child(7) {background-color: #333; width: 25%; height: 50%;}
+.box1>p:nth-child(8) {background-color: #444; width: 25%; height: 25%;}
+.box1>p:nth-child(9) {background-color: #555; width: 25%; height: 25%;}
+.box1>p:nth-child(10) {background-color: #666; width: 25%; height: 25%;}
+.box1>p:nth-child(11) {background-color: #777; width: 50%; height: 25%;}
+.box1>p:nth-child(12) {background-color: #888; width: 25%; height: 25%;}
+/* 박스2설정 */
+.box2>p {float: left;}
+.box2>p:nth-child(1) {background-color: #ddd; width: 25%; height: 25%;}
+.box2>p:nth-child(2) {background-color: #ccc; width: 25%; height: 25%;}
+.box2>p:nth-child(3) {background-color: #bbb; width: 50%; height: 25%;}
+.box2>p:nth-child(4) {background-color: #aaa; width: 25%; height: 50%;}
+.box2>p:nth-child(5) {background-color: #111; width: 50%; height: 50%;}
+.box2>p:nth-child(6) {background-color: #222; width: 25%; height: 25%;}
+.box2>p:nth-child(7) {background-color: #333; width: 25%; height: 25%;}
+.box2>p:nth-child(8) {background-color: #444; width: 25%; height: 25%;}
+.box2>p:nth-child(9) {background-color: #555; width: 25%; height: 25%;}
+.box2>p:nth-child(10) {background-color: #666; width: 25%; height: 25%;}
+.box2>p:nth-child(11) {background-color: #777; width: 25%; height: 25%;}
+/* 박스3설정 */
+.box3>p {float: left;}
+.box3>p:nth-child(1) {background-color: #ddd; width: 50%; height: 100%;}
+.box3>p:nth-child(2) {background-color: #ccc; width: 25%; height: 25%;}
+.box3>p:nth-child(3) {background-color: #bbb; width: 25%; height: 25%;}
+.box3>p:nth-child(4) {background-color: #aaa; width: 50%; height: 25%;}
+.box3>p:nth-child(5) {background-color: #111; width: 25%; height: 50%;}
+.box3>p:nth-child(6) {background-color: #222; width: 25%; height: 25%;}
+.box3>p:nth-child(7) {background-color: #333; width: 25%; height: 25%;}
