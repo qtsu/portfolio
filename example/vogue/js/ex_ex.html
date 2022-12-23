@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제이쿼리예제 연습</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  <h1>* click! 자판기 *</h1>
+  <table  class="box" border="1">
+    <tbody>
+      <tr class="name" id="menu1">
+        <td><b>Water</b></td>
+        <td><b>Cola</b></td>
+        <td><b>Juice</b></td>
+        <td><b>Coffee</b></td>
+        <td><b>Tea</b></td>
+        <td><b>Mint Choco</b></td>
+      </tr>
+      <tr class="imgs" id="menu2">
+        <td><img src="../img/e_mg/water.jpg" alt=""></td>
+        <td><img src="../img/e_mg/cola.jpg" alt=""></td>
+        <td><img src="../img/e_mg/juice.jpg" alt=""></td>
+        <td><img src="../img/e_mg/coffee.jpg" alt=""></td>
+        <td><img src="../img/e_mg/tea.jpg" alt=""></td>
+        <td><img src="../img/e_mg/mint.jpg" alt=""></td>
+      </tr>
+    </tbody>
+  </table>
+
+<style>
+  h1 {text-align: center; margin: 50px;}
+  .box {margin-left: 50px; margin-right: 50px;}
+  .name {text-align: center;}
+  .imgs img {width: 100%;  position: relative;;}
+</style>
+
+  <script>
+    $(document).ready(function(){
+    // menu1 안에 있는 리스트를 클릭했을 때 내 자신의 색깔이 바뀌어라.
+    $('#menu1 td:nth-child(1)').click(function(){
+      $(this).css({'color':'blue'});
+    });
+    $('#menu1 td:nth-child(2)').click(function(){
+      $(this).css({'color':'red'});
+    });
+    $('#menu1 td:nth-child(3)').click(function(){
+      $(this).css({'color':'orange'});
+    });
+    $('#menu1 td:nth-child(4)').click(function(){
+      $(this).css({'color':'brown'});
+    });
+    $('#menu1 td:nth-child(5)').click(function(){
+      $(this).css({'color':'green'});
+    });
+    $('#menu1 td:nth-child(6)').click(function(){
+      $(this).css({'color':'mediumaquamarine'});
+    });
+    //menu2 안에 있는 li를 클릭해서 순번을 찾아라.
+    //box 안에 p의 순번을 li의 순번과 동일하게 보여라.
+    //클릭한 li자신의 스타일을 바꾸어라.
+    $('#menu1 td:nth-child(1)').click(function(){
+      let ab = $(this).index();
+      console.log(ab);
+      $('.imgs img').css({'display':'none'});
+      $('.imgs img').eq(ab).css({'display':'block'});
+    })
+    })
+  </script>
+</body>
+</html>
