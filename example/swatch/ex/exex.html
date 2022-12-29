@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마우스이펙트연습</title>
+</head>
+<body>
+  <div class="box">
+    <div class="point"></div>
+    <div class="red"></div>
+    <div class="orange"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="purple"></div>
+    <div class="black"></div>
+  </div>
+  <style>
+    * {margin: 0; padding: 0;}
+    .box {position: fixed; width: 100%; height: 100%; background-color: blanchedalmond;}
+    .red {width: 100%; height: 125px; background-color: red;}
+    .orange {width: 100%; height: 125px; background-color: orange;}
+    .yellow {width: 100%; height: 125px; background-color: yellow;}
+    .green {width: 100%; height: 125px; background-color: green;}
+    .blue {width: 100%; height: 125px; background-color: blue;}
+    .purple {width: 100%; height: 125px; background-color: purple;}
+    .gray {width: 100%; height: 125px; background-color: gray;}
+    .point {position: absolute; width: 50px; height: 50px; background-color: rgba(0, 0, 0, 0.3); border-radius: 100%; left: 0; top: 0; pointer-events: none; transition: all 0.2s;}
+    .point.on {width: 10px; height: 10px;}
+    .point.on2 {width: 50px; height: 50px;}
+    .point.on3 {width: 100px; height: 100px;}
+    .point.on4 {width: 150px; height: 150px; transition: all 0.8s;}
+    .point.on5 {width: 200px; height: 200px;}
+    .point.on6 {width: 250px; height: 250px;}
+    .point.on7 {width: 300px; height: 300px;}
+    .point.on8 {width: 350px; height: 350px;}
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(window).mousemove(function(e){
+        let x = e.pageX, y=e.pageY
+        $('.point').css({'left':x, 'top':y})
+      })
+      $('.box').mouseenter(function(){
+        $('.point').addClass('on')
+      })
+      $('.box').mouseleave(function(){
+        $('.point').removeClass('on')
+      })
+      $('.red').mouseenter(function(){
+        $('.point').addClass('on2')
+      })
+      $('.red').mouseleave(function(){
+        $('.point').removeClass('on2')
+      })
+      $('.orange').mouseenter(function(){
+        $('.point').addClass('on3')
+      })
+      $('.orange').mouseleave(function(){
+        $('.point').removeClass('on3')
+      })
+      $('.yellow').mouseenter(function(){
+        $('.point').addClass('on4')
+      })
+      $('.yellow').mouseleave(function(){
+        $('.point').removeClass('on4')
+      })
+      $('.green').mouseenter(function(){
+        $('.point').addClass('on5')
+      })
+      $('.green').mouseleave(function(){
+        $('.point').removeClass('on5')
+      })
+      $('.blue').mouseenter(function(){
+        $('.point').addClass('on6')
+      })
+      $('.blue').mouseleave(function(){
+        $('.point').removeClass('on6')
+      })
+      $('.purple').mouseenter(function(){
+        $('.point').addClass('on7')
+      })
+      $('.purple').mouseleave(function(){
+        $('.point').removeClass('on7')
+      })
+      $('.gray').mouseenter(function(){
+        $('.point').addClass('on8')
+      })
+      $('.gray').mouseleave(function(){
+        $('.point').removeClass('on8')
+      })
+    })
+  </script>
+</body>
+</html>
