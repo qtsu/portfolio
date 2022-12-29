@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.mousewheel.js"></script>
+</head>
+<body>
+    <header>
+      <ul id="menu">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+      <li><a href="#">menu5</a></li>
+      <li><a href="#">menu6</a></li>
+      <li><a href="#">menu7</a></li>
+      <li><a href="#">menu8</a></li>
+      </ul>
+    </header>
+    <div>
+      <section>section1</section>
+      <section>section2</section>
+      <section>section3</section>
+      <section>section4</section>
+      <section>section6</section>
+      <section>section7</section>
+      <section>section8</section>
+    </div>
+
+<style>
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: rgb(38, 95, 76);}
+img {border: none; margin-top: 20px; position: absolute;}
+body {font-family: 'Balsamiq Sans', cursive;}
+
+header {position: fixed; left: 0; top: 0; width: 100%; height: 120px; display: flex; align-items: center;}
+header ul {display: flex; justify-content: space-around; align-items: center; width: 100%; height: 100%; list-style: none; flex-wrap: wrap;}
+header li {list-style: none; cursor: pointer; color: #fff; font-size: 28px; height: 100%; width: 12.5%; display:flex; align-items: center; justify-content: center;}
+header li:hover {color: black; text-shadow: 0 0 5px #fff;}
+header li:hover {background-color: #499e77; color: black; text-shadow: 0 0 5px #fff;}
+
+section {width: 100%; display: flex; font: 5em 'Balsamiq Sans', cursive; justify-content: center; align-items: center; color: #fff;}
+section:nth-child(1) {background-color:#8ecabb;}
+section:nth-child(2) {background-color:#aceedd;}
+section:nth-child(3) {background-color:#aceedd;}
+section:nth-child(4) {background-color:#aceedd;}
+section:nth-child(5) {background-color:#aceedd;}
+section:nth-child(6) {background-color:#aceedd;}
+section:nth-child(7) {background-color:#aceedd;}
+section:nth-child(8) {background-color:#aceedd;}
+</style>
+
+<script>
+$(document).ready(function(){
+  let ht = $(this).height()
+$('section').height(ht)
+  $(window).resize(function(){
+      let ht = $(this).height()
+      $('section').height(ht)
+  });
+  $('header li').click(function(){
+      let i = $(this).index();
+      let ht = $(window).height();
+      let oht= $('section').eq(i).offset().top
+      $('html,body').stop().animate({'scrollTop':ht*i},1400)
+      $('section').eq(i).text(oht)
+  })
+// 마우스에서 휠을 올렸을 때 내렸을 때, 움직인다.
+$('section').mousewheel(function(event,delta){
+  if(delta>0){
+  // $('section').text('마우스를 올렸습니다.')
+    let prev = $(this).prev().offset().top;
+    $('html,body').stop().animate({'scrollTop':prev},1400)
+    // 이전페이지로 이동
+    }else if (delta<0){
+      let next = $(this).next().offset().top;
+      $('html,body').stop().animate({'scrollTop':next},1400)
+    // 다음페이지로 이동
+    // $('section').text('마우스를 내렸습니다.')
+  }
+})
+})
+</script>
+</body>
+</html>

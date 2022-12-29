@@ -34,15 +34,44 @@ $(document).ready(function(){
     let posy = e.pageY;
   $('.box h2').eq(0).text(posx);
   $('.box h2').eq(1).text(posy);
-  $('.p11').css({'bottom': 20-posy/30, 'right': 20+posx/30})
-  $('.p12').css({'bottom': -40-posy/30, 'right': 130-posx/30})
-  $('.p13').css({'top': 180-posy/30, 'right': 60-posx/30})
-  $('.p21').css({'bottom': -480-posy/30, 'right': -180-posx/30})
-  $('.p22').css({'bottom': -40-posy/30, 'right': 130-posx/30})
-  $('.p31').css({'bottom': 30-posy/30, 'right': 180-posx/30})
-  $('.p32').css({'bottom': -270-posy/30, 'right': 110-posx/30})
-  $('.p33').css({'bottom': -130-posy/30, 'right': -70-posx/30})
-  $('.p41').css({'bottom': -120-posy/30, 'right': 20-posx/30})
-  $('.p42').css({'bottom': -180-posy/30, 'right': 0-posx/30})
+  $('.p11').css({'bottom': -76-posy/30, 'right': 9+posx/30})
+  $('.p12').css({'bottom': 106-posy/30, 'right': 158-posx/30})
+  $('.p13').css({'top': 325-posy/30, 'right': 88-posx/30})
+  $('.p21').css({'bottom': -553-posy/30, 'right': -217-posx/30})
+  $('.p22').css({'bottom': -2-posy/30, 'left': 620-posx/30})
+  $('.p31').css({'bottom': -3-posy/30, 'right': 242-posx/30})
+  $('.p32').css({'bottom': -159-posy/30, 'right': 166-posx/30})
+  $('.p33').css({'bottom': -19-posy/30, 'right': -13-posx/30})
+  $('.p41').css({'bottom': -216-posy/30, 'right': -6-posx/30})
+  $('.p42').css({'bottom': -34-posy/30, 'right': 39-posx/30})
+})
+// 스크롤바의 위치값 찾아내기
+$(window).scroll(function(){
+  let sc = $(this).scrollTop();
+  $('h1').text(sc);
+  // 애니메이트작성법 . animate({속성명:속성값},지속시간)
+  // 지속시간 1000 = 1초
+})
+// li를 클릭했을 때, scrollTop을 해당높이로 가게 만들어라.
+$('#gnb li')/*.eq(3) 이건 넘버링이다*/.click(function(){
+  // 클릭했을 때 나의 순번찾기
+  let i = $(this).index();
+  let ht = $(window).height();
+
+  $('html,body').animate({'scrollTop':ht*i},1400,'easeOutBounce')
+})
+// h1에 마우스가 들어갔을 때 나의 위치값을 찾아라.
+$('h1').mouseenter(function(){
+  let abc = $(this).offset().top;
+  alert(abc)
+})
+$('section').mousewheel(function(event,delta){
+  if(delta>0){
+    let prev = $(this).prev().offset().top;
+    $('html,body').stop().animate({'scrollTop':prev},1500)
+  }else if(delta<0){
+    let next = $(this).next().offset().top;
+    $('html,body').stop().animate({'scrollTop':next},1500)
+  }
 })
 })
