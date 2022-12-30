@@ -11,8 +11,9 @@
 </head>
 <body>
     <header>
+      <h1></h1>
       <ul id="menu">
-      <li><a href="#">menu1</a></li>
+      <li class="on"><a href="#">menu1</a></li>
       <li><a href="#">menu2</a></li>
       <li><a href="#">menu3</a></li>
       <li><a href="#">menu4</a></li>
@@ -45,8 +46,25 @@ body {font-family: 'Balsamiq Sans', cursive;}
 header {position: fixed; left: 0; top: 0; width: 100%; height: 120px; display: flex; align-items: center;}
 header ul {display: flex; justify-content: space-around; align-items: center; width: 100%; height: 100%; list-style: none; flex-wrap: wrap;}
 header li {list-style: none; cursor: pointer; color: #fff; font-size: 28px; height: 100%; width: 12.5%; display:flex; align-items: center; justify-content: center;}
-header li:hover {color: black; text-shadow: 0 0 5px #fff;}
-header li:hover {background-color: #499e77; color: black; text-shadow: 0 0 5px #fff;}
+header li:hover {font-size: 40px;}
+header li:nth-child(1):hover {background-color: #499e77;}
+header li:nth-child(2):hover {background-color: #499e77;}
+header li:nth-child(3):hover {background-color: #499e77;}
+header li:nth-child(4):hover {background-color: #499e77;}
+header li:nth-child(5):hover {background-color: #499e77;}
+header li:nth-child(6):hover {background-color: #499e77;}
+header li:nth-child(7):hover {background-color: #499e77;}
+header li:nth-child(8):hover {background-color: #499e77;}
+
+header li.on {font-size: 40px;}
+header li:nth-child(1).on {background-color: #499e77;}
+header li:nth-child(2).on {background-color: #499e77;}
+header li:nth-child(3).on {background-color: #499e77;}
+header li:nth-child(4).on {background-color: #499e77;}
+header li:nth-child(5).on {background-color: #499e77;}
+header li:nth-child(6).on {background-color: #499e77;}
+header li:nth-child(7).on {background-color: #499e77;}
+header li:nth-child(8).on {background-color: #499e77;}
 
 section {width: 100%; display: flex; font: 5em 'Balsamiq Sans', cursive; justify-content: center; align-items: center; color: #fff;}
 section:nth-child(1) {background-color:#8ecabb;}
@@ -67,6 +85,20 @@ $('section').height(ht)
       let ht = $(this).height()
       $('section').height(ht)
   });
+
+// 반복문설정
+$(window).scroll(function(){
+  let sc = $(this).scrollTop();
+  let ht = $(window).height();
+  for(var ab=0; ab<9; ab++){
+    if(sc>=ht*ab && sc<ht*(ab+1)){
+      $('header li').removeClass('on')
+      $('header li').eq(ab).addClass('on')
+    }
+  }
+})
+
+// li를 클릭했을 때, scrollTop을 해당높이로 가게 만들어라.
   $('header li').click(function(){
       let i = $(this).index();
       let ht = $(window).height();
@@ -74,6 +106,7 @@ $('section').height(ht)
       $('html,body').stop().animate({'scrollTop':ht*i},1400)
       $('section').eq(i).text(oht)
   })
+
 // 마우스에서 휠을 올렸을 때 내렸을 때, 움직인다.
 $('section').mousewheel(function(event,delta){
   if(delta>0){

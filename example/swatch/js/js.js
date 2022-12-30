@@ -51,27 +51,61 @@ $(window).scroll(function(){
   $('h1').text(sc);
   // 애니메이트작성법 . animate({속성명:속성값},지속시간)
   // 지속시간 1000 = 1초
+  let ht = $(window).height();
+  // if(sc>=0 && sc<ht*1){
+  //   $('#gnb li').removeClass('on')
+  //   $('#gnb li').eq(0).addClass('on')
+  // }
+  // if(sc>=ht*1 && sc<ht*2){
+  //   $('#gnb li').removeClass('on')
+  //   $('#gnb li').eq(1).addClass('on')
+  // }
+  // if(sc>=ht*2 && sc<ht*3){
+  //   $('#gnb li').removeClass('on')
+  //   $('#gnb li').eq(2).addClass('on')
+  // }
+  // if(sc>=ht*3 && sc<ht*4){
+  //   $('#gnb li').removeClass('on')
+  //   $('#gnb li').eq(3).addClass('on')
+  // }
+  // 반복문설정
+  for(var ab=0; ab<5; ab++){
+    if(sc>=ht*ab && sc<ht*(ab+1)){
+      $('#gnb li').removeClass('on')
+      $('#gnb li').eq(ab).addClass('on')
+    }
+  }
 })
+
 // li를 클릭했을 때, scrollTop을 해당높이로 가게 만들어라.
 $('#gnb li')/*.eq(3) 이건 넘버링이다*/.click(function(){
   // 클릭했을 때 나의 순번찾기
   let i = $(this).index();
   let ht = $(window).height();
 
-  $('html,body').animate({'scrollTop':ht*i},1400,'easeOutBounce')
+  // 클릭했을 때 나에게 클래스 on값을 붙여라.
+  $('#gnb li').removeClass('on')
+  $(this).addClass('on')
+
+  $('html,body').stop().animate({'scrollTop':ht*i},1400,'easeOutBounce')
 })
+
 // h1에 마우스가 들어갔을 때 나의 위치값을 찾아라.
 $('h1').mouseenter(function(){
   let abc = $(this).offset().top;
   alert(abc)
 })
+
+// 마우스휠을 올렸을 때, 마우스휠을 내렸을 때 화면이 바뀌어라.
 $('section').mousewheel(function(event,delta){
+  // 마우스를 올렸을 때
   if(delta>0){
     let prev = $(this).prev().offset().top;
-    $('html,body').stop().animate({'scrollTop':prev},1500)
+    $('html,body').stop().animate({'scrollTop':prev},1400,'easeOutBounce')
+  // 마우스를 내렸을 때
   }else if(delta<0){
     let next = $(this).next().offset().top;
-    $('html,body').stop().animate({'scrollTop':next},1500)
+    $('html,body').stop().animate({'scrollTop':next},1400,'easeOutBounce')
   }
 })
 })
