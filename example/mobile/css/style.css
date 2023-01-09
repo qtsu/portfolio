@@ -26,7 +26,7 @@ h1 {background-image: url(../img/logo_b.png); width: 90px; height: 80px; backgro
 
 /* 디지털시계설정 */
 section {width: 1226px; height: 809px; background-image: url(../img/phone_morning.png); position: fixed; right: -300px; top: 200px; transition: all 0.8s;}
-section div {width: 540px; height: 304px; display: flex; justify-content: center; /*align-items: center;*/ padding-top: 80px; position: absolute; left: 138px; top: 100px; font-size: 60px;}
+section div {width: 540px; height: 304px; display: flex; justify-content: center; /*align-items: center;*/ padding-top: 110px; position: absolute; left: 138px; top: 100px; font-size: 60px; overflow: hidden;}
 section div span {}
 
 /* nav설정 */
@@ -34,6 +34,34 @@ nav {position: fixed; bottom: 0; width: 100%;}
 nav ul {display: flex; width: 100%; justify-content: space-around;}
 nav li {padding: 20px; width: 20%; background-color: rgba(255, 255, 255, 0.5); text-align: center; letter-spacing: 10px; cursor: pointer; transition: all 0.8s;}
 nav li:hover {background-color: rgba(0, 0, 0, 0.5); color: #fff;}
+
+/* 전체구름설정 */
+.c1 {position: absolute; left: -1146px; top: 0; animation: ani1 110s linear infinite;}
+.c2 {position: absolute; left: 0; top: 20px; animation: ani2 100s linear infinite;}
+@keyframes ani1 {
+  0% {left: -1146px;}
+  100% {left: 2000px}
+}
+@keyframes ani2 {
+  0% {left: 0;}
+  50% {left: 2000px;}
+  50.001% {left: -1840px;}
+  100% {left: 0;}
+}
+/* 폰구름설정 */
+.p1 {position: absolute; left: -600px; width: 600px; height: auto; top: 23px; animation: ani3 80s linear infinite;}
+.p2 {position: absolute; left: 0; width: 700px; height: auto; top: 2px; animation: ani4 80s linear infinite;}
+@keyframes ani3 {
+  0% {left: -600px;}
+  100% {left: 800px;}
+}
+@keyframes ani4 {
+  0% {left: 0;}
+  50% {left: 800px;}
+  50.001% {left: -900px;}
+  100% {left: 0;}
+}
+
 nav li:nth-child(1):hover {background-color: rgba(245, 248, 66, 0.801);}
 nav li:nth-child(2):hover {background-color: rgba(90, 91, 165, 0.781);}
 nav li:nth-child(3):hover {background-color: rgba(224, 117, 55, 0.808);}

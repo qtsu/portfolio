@@ -39,7 +39,18 @@ $(document).ready(function(){
     $('.phone span').eq(0).text(hNum);
     $('.phone span').eq(1).text(mNum);
     $('.phone span').eq(2).text(sNum);
-    //if(hr>=6){$('#wrap').addClass('morning')}
+    // if(hr>=6 && hr< 12){
+    //   $('#wrap').removeClass('night')
+    //   $('#wrap').addClass('morning')
+    // if(hr>=12 && hr< 18)
+    // $('#wrap').removeClass('morning')
+    //   $('#wrap').addClass('afternoon')
+    // if(hr>=18 && hr< 21)
+    // $('#wrap').removeClass('afternoon')
+    //   $('#wrap').addClass('evening')
+    // if(hr>=21 && hr< 6)
+    // $('#wrap').removeClass('evening')
+    //   $('#wrap').addClass('night')}
     },1000);
 
   $('nav li').click(function(){
