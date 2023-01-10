@@ -8,57 +8,73 @@ ul,ol {list-style: none;}
 
 /* 기본 설정 */
 header {width: 100%; height: 180px; background-color:#000;}
-.mainslider {width: 100%; height: 1600px; background-color:#999;}
+.mainslider {width: 100%; height: 1100px; background-color:#999;}
 .display {width: 100%; height: 1620px; background-color:#888;}
 .gallery {width: 100%; height: 1930px; background-color:#777;}
 .program {width: 100%; height: 2080px; background-color:#666;}
-.video {width: 100%; height: 1850px; background-color:#555;}
-.information {width: 100%; height: 1450px; background-color:#444;}
-.floor {width: 100%; height: 2230px; background-color:#333;}
-.place {width: 100%; height: 2200px; background-color:#222;}
-.footer {width: 100%; height: 690px; background-color:#111;}
+.video {width: 100%; height: 1850px; background-color:#888;}
+.information {width: 100%; height: 1450px; background-color:#777;}
+.floor {width: 100%; height: 2230px; background-color:#ccc;}
+.place {width: 100%; height: 2200px; background-color:#bbb;}
+.footer {width: 100%; height: 300px; background-color:#aaa;}
 
 .wrap {height: 100%; background-color: rgba(0, 0, 0, 0.3);}
 
 /* header 설정 */
 header {left: 0; top: 0;}
 header .wrap {display: flex; justify-content: space-between; position: relative;}
-header .logo {width: 330px; height: 50%; margin-top: 54px; margin-left: 90px; margin-right: 120px; background-color: tomato;}
-header nav {width: 800px; height: 30%; margin-top: 90px; margin-right: 90px; background-color:springgreen;}
-header .utilLanguge {width: 40px; height: 20%; position: absolute; right: 4%; top: 20px; background-color: wheat;}
-header .utilVr {width: 40px; height: 20%; position: absolute; right: 8%; top: 20px; background-color: white;}
+header .logo {width: 330px; height: 50%; margin-top: 54px; margin-left: 120px; margin-right: 120px; background-color: tomato;}
+header nav {width: 700px; height: 30%; margin-top: 90px; margin-right: 120px; background-color:springgreen;}
+header .menu {}
+header .utilLanguge {width: 40px; height: 20%; position: absolute; right: 8%; top: 20px; background-color: wheat;}
+header .utilVr {width: 40px; height: 20%; position: absolute; right: 12%; top: 20px; background-color: white;}
 
 /* mainslider 설정 */
 .mainslider {}
-.mainslider .wrap {}
+.mainslider .wrap {display: flex; justify-content: center;}
+.mainslider .simg {width: 1200px; height: 72%; background-color: cadetblue;}
 
 /* display 설정 */
 .display {}
-.display .wrap {}
+.display .wrap {position: relative;}
+.display .d {width: 250px; height: 60px; left: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
+.display section {}
+.display .d1 {width: 400px; height: 650px; top: 480px; right: 520px; position: absolute; background-color:sandybrown;}
+.display .d2 {width: 250px; height: 450px; top: 580px; right: 240px; position: absolute; background-color:wheat;}
+.display .d3 {width: 180px; height: 250px; top: 680px; right: 30px; position: absolute; background-color:snow;}
+.display .d4 {width: 250px; height: 450px; top: 580px; left: 240px; position: absolute; background-color:wheat;}
+.display .d5 {width: 180px; height: 250px; top: 680px; left: 30px; position: absolute; background-color:snow;}
 
 /* gallery 설정 */
 .gallery {}
-.gallery .wrap {}
+.gallery .wrap {position: relative;}
+.gallery .g {width: 250px; height: 60px; right: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
+.gallery .gvideo {width: 1200px; height: 500px; background-color: skyblue;}
 
 /* program 설정 */
 .program {}
-.program .wrap {}
+.program .wrap {position: relative;}
+.program .p {width: 250px; height: 60px; left: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
 
 /* video 설정 */
 .video {}
-.video .wrap {}
+.video .wrap {position: relative;}
+.video .v {width: 250px; height: 60px; right: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
 
 /* information 설정 */
 .information {}
-.information .wrap {}
+.information .wrap {position: relative;}
+.information .i {width: 250px; height: 60px; left: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
 
 /* floor 설정 */
 .floor {}
-.floor .wrap {}
+.floor .wrap {position: relative;}
+.floor .f {width: 250px; height: 60px; right: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
 
 /* place 설정 */
 .place {}
-.place .wrap {}
+.place .wrap {position: relative;}
+.place .pl {width: 250px; height: 60px; left: 120px; top: 130px; position: absolute; background-color: yellowgreen;}
 
 /* footer 설정 */
 .footer {}
@@ -67,7 +83,33 @@ header .utilVr {width: 40px; height: 20%; position: absolute; right: 8%; top: 20
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@미디어쿼리구간@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* 1280px이하일 때 */
+@media(max-width:1280px){
+  
+}
+
+/* 1025px이상~1279px이하일 때 */
+@media(min-width:1025px) and (max-width:1279px){
+
+}
+
+/* 768px이상~1024px이하일 때 */
+@media(min-width:768px) and (max-width:1024px){
+
+}
+
+/* 661px이상~767px이하일 때 */
+@media(min-width:661px) and (max-width:767px){
+
+}
+
+/* 421px이상~660px이하일 때 */
+@media(min-width:421px) and (max-width:660px) {
+
+}
+
 /* 1450px이상일 때 */
-@media(min-width: 1450px){
+@media(min-width:1450px){
   .wrap {width: 1440px; margin: 0 auto;}
 }

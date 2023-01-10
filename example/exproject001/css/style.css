@@ -81,7 +81,141 @@ header nav {width: 80%; height: 100%; background-color: burlywood;}
 
 
 /* ###################################미디어쿼리구간#################################### */
+
+/* 1280px이하일 때 */
+@media(max-width:1280px){
+  /* slide 설정 */
+  .slide .txtBox {width: 400px; height: 300px; margin-left: 50px;}
+  /* 비디오 설정 */
+  .relation .form {width: 100%;}
+  .relation .videoBox {top: -200px;}
+}
+
+/* 1025px이상~1279px이하일 때 */
+@media(min-width:1025px) and (max-width:1279px){
+
+}
+
+/* 768px이상~1024px이하일 때 */
+@media(min-width:768px) and (max-width:1024px){
+  /* header 설정 */
+  header {height: 180px;}
+  header .wrap {flex-direction: column;}
+  header .logo {width: 20%; text-align: center; margin: 0 auto;}/*width:20%; margin:0 auto; 로고를 이미지로 넣을 시*/
+  header nav {width: 100%;}
+  /* slide 설정 */
+  .slide {margin-top: 180px;}
+  .slide .wrap {justify-content: center;}
+  .slide .txtBox {width: 60%; margin-left: 0;}/*기계가 작아질수록 수치값은 %를 사용하는 편이 낫다*/
+  .relation .videoBox {display: none;}
+  /* gallery 설정 */
+  .gallery .wrap {flex-direction: column;}
+  .gallery .txtBox {width: 100%; height: 30%;}
+  .gallery .imgBox {width: 100%;}
+  .gallery ul {left: 0px; top: 20%;}
+  .gallery li {width: 200px; height: 250px;}
+  /* review 설정 */
+  .review ul {margin-top: -150px;}
+  .review li {width: 300px; height: 300px;}
+}
+
+/* 661px이상~767px이하일 때 */
+@media(min-width:661px) and (max-width:767px){
+  /* header 설정 */
+  header {height: 180px;}
+  header .wrap {flex-direction: column;}
+  header .logo {width: 20%; text-align: center; margin: 0 auto;}/*width:20%; margin:0 auto; 로고를 이미지로 넣을 시*/
+  header nav {width: 100%;}
+  /* slide 설정 */
+  .slide {margin-top: 180px;}
+  .slide .wrap {justify-content: center;}
+  .slide .txtBox {width: 60%; margin-left: 0;}/*기계가 작아질수록 수치값은 %를 사용하는 편이 낫다*/
+  .relation .videoBox {display: none;}
+  /* gallery 설정 */
+  .gallery .wrap {flex-direction: column;}
+  .gallery .txtBox {width: 100%; height: 30%;}
+  .gallery .imgBox {width: 100%;}
+  .gallery ul {left: 0px; top: 20%;}
+  .gallery li {width: 200px; height: 250px;}
+  /* review 설정 */
+  .review ul {margin-top: -150px;}
+  .review li {width: 300px; height: 300px;}
+  /* infosection 설정 */
+  .infosection .conBox {width: 90%;}
+  .infosection li:nth-child(1) {width: 100%; margin-right: 0; height: 50%;}
+  .infosection li:nth-child(2) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(3) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(4) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(5) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+}
+
+/* 421px이상~660px이하일 때 */
+@media(min-width:421px) and (max-width:660px){
+  /* header 설정 */
+  header {height: 180px;}
+  header .wrap {flex-direction: column;}
+  header .logo {width: 20%; text-align: center; margin: 0 auto;}/*width:20%; margin:0 auto; 로고를 이미지로 넣을 시*/
+  header nav {width: 100%;}
+  /* slide 설정 */
+  .slide {margin-top: 180px;}
+  .slide .wrap {justify-content: center;}
+  .slide .txtBox {width: 80%; margin-left: 0;}/*기계가 작아질수록 수치값은 %를 사용하는 편이 낫다*/
+  .relation .videoBox {display: none;}
+  /* gallery 설정 */
+  .gallery .wrap {flex-direction: column;}
+  .gallery .txtBox {width: 100%; height: 30%;}
+  .gallery .imgBox {width: 100%;}
+  .gallery ul {width: 3240px; left: 0px; top: 20%;}
+  .gallery li {width: 400px; height: 250px;}
+  /* review 설정 */
+  .review ul {margin-top: -150px;}
+  .review li {width: 400px; height: 300px;}
+  /* infosection 설정 */
+  .infosection .conBox {width: 90%;}
+  .infosection li {display: none;}
+  .infosection li:nth-child(1) {width: 100%; margin-right: 0; height: 100%; display: block;}
+  .infosection li:nth-child(2) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(3) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(4) {width: 49.5%; margin-right: 0.5%; height: 24%;}
+  .infosection li:nth-child(5) {width: 49.5%; margin-right: 0.5%; height: 24%;}
+  /* 좌우버튼설정 _gallery, review 공통 */
+  .btn {right: 50%; margin-right: -50.25px;}
+}
+
+/* 420px이하일 때 */
+@media(max-width:420px){
+  /* header 설정 */
+  header {height: 180px;}
+  header .wrap {flex-direction: column;}
+  header .logo {width: 20%; text-align: center; margin: 0 auto;}/*width:20%; margin:0 auto; 로고를 이미지로 넣을 시*/
+  header nav {width: 100%;}
+  /* slide 설정 */
+  .slide {margin-top: 180px;}
+  .slide .wrap {justify-content: center;}
+  .slide .txtBox {width: 80%; margin-left: 0;}/*기계가 작아질수록 수치값은 %를 사용하는 편이 낫다*/
+  .relation .videoBox {display: none;}
+  /* gallery 설정 */
+  .gallery .wrap {flex-direction: column;}
+  .gallery .txtBox {width: 100%; height: 30%;}
+  .gallery .imgBox {width: 100%;}
+  .gallery ul {width: 3240px; left: 0px; top: 20%;}
+  .gallery li {width: 400px; height: 250px;}
+  /* review 설정 */
+  .review ul {margin-top: -150px;}
+  .review li {width: 400px; height: 300px;}
+  /* infosection 설정 */
+  .infosection .conBox {width: 90%;}
+  .infosection li {display: none;}
+  .infosection li:nth-child(1) {width: 100%; margin-right: 0; height: 100%; display: block;}
+  .infosection li:nth-child(2) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(3) {width: 49.5%; margin-right: 0.5%; height: 24%; margin-top: 1%;}
+  .infosection li:nth-child(4) {width: 49.5%; margin-right: 0.5%; height: 24%;}
+  .infosection li:nth-child(5) {width: 49.5%; margin-right: 0.5%; height: 24%;}
+  /* 좌우버튼설정 _gallery, review 공통 */
+  .btn {right: 50%; margin-right: -50.25px;}
+}
+
 /* 1450px이상일 때 */
-@media(min-width: 1450px){
+@media(min-width:1450px){
   .wrap {width: 1440px; margin: 0 auto;}
 }
