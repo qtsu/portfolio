@@ -21,16 +21,17 @@ header {width: 100%; height: 150px; background-color:#fff;}
 .place {width: 100%; height: 2200px; background-color:#bbb;}
 footer {width: 100%; height: 300px; background-color:#aaa;}
 
-/* .wrap {height: 100%; background-color: rgba(0, 0, 0, 0.3);} */
-
 /* header 설정 */
 header {position: fixed; left: 0; top: 0; z-index: 9999;}
-header .wrap {display: flex; justify-content: space-between; align-items: center; height: 100%;}
-header h1 {width: 300px; height: 100px; margin-left: 20px; background-image: url(../img/images/logo.png); background-size: contain; background-repeat: no-repeat;}
+header .wrap {height: 100%; display: flex; justify-content: space-between; align-items: center;}
+header .logo {width: 300px; height: 100px; margin-left: 20px; background-image: url(../img/images/logo.png); background-size: contain; background-repeat: no-repeat;}
 header nav {width: 90%; height: 80px; font-family: 'twayair';}
 header nav ul {display: flex; justify-content: flex-end;}
 header nav ul li {}
 header nav ul li a {display: block; padding: 40px; font-size: 22px;}
+
+.util .language img {width: 40px; height: 21%; position: absolute; right: 17%; top: 15px;}
+.util .vr img {width: 40px; height: 20%; position: absolute; right: 14%; top: 15px;}
 
 .submenu {position: relative; font-family: 'twayair';}
 .submenu ul {width: 100%; padding: 20px 0; position: absolute; left: 0; top: 0; display: flex; justify-content: flex-end; align-items: center; flex-wrap: nowrap;}
@@ -43,12 +44,9 @@ header nav ul li a {display: block; padding: 40px; font-size: 22px;}
 .sub4 {background-color: #c7a79d; opacity: 70%; height: 40px;}
 .sub5 {background-color: #c7a79d; opacity: 70%; height: 40px;}
 
-header .language img {width: 40px; height: 21%; position: absolute; right: 17%; top: 15px;}
-header .vr img {width: 40px; height: 20%; position: absolute; right: 14%; top: 15px;}
-
 /* slide 설정 */
 .slide {display: flex; justify-content: center;}
-.slide .img {width: 1436px; height: 820px; top: 180px; margin-top: 150px; background-color: cadetblue;}
+.slide .img {width: 1436px; height: 820px; top: 180px; margin-top: 150px; background-color: red;}
 .slide h3 {}
 .slide p {}
 .slide .btn {}
